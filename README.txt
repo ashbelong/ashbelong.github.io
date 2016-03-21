@@ -1,7 +1,5 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/anon/pen/KzWXZK.
+A Pen created at CodePen.io. You can find this one at http://codepen.io/anon/pen/zqZPrP.
 
- A hexagon image grid using clip-path. Images from http://unsplash.com
+ 
 
-Forked from [Tiffany Stoik](http://codepen.io/tstoik/)'s Pen [Hexagon Grid](http://codepen.io/tstoik/pen/qZEZJp/).
-
-Forked from [Tiffany Stoik](http://codepen.io/tstoik/)'s Pen [Hexagon Grid](http://codepen.io/tstoik/pen/qZEZJp/).
+Forked from [Fabio Ottaviani](http://codepen.io/supah/)'s Pen [DailyUI #016 - Popup / Overlay](http://codepen.io/supah/pen/ZWGJeR/).
