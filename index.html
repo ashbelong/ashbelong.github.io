@@ -26,16 +26,15 @@
 }
 
 .content-box {
-  background-color: #309a8f;
+  background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 100px;
-  right: 0px;
-  bottom: 0px;
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
   left: 30px;
   padding: 30px;
   color: white;
   overflow: scroll;
-  z-index: 1;
 }
 
 .content-box a {
@@ -178,12 +177,12 @@ h2:before, h2:after {
   color: turquoise;
 }
 
-.grid--item:active .img:before,
-.grid--item:active .img:after,
-.grid--item:active .container {
+.grid--item:focus .img:before,
+.grid--item:focus .img:after,
+.grid--item:focus .container {
   opacity: 2;
 }
-.grid--item:active .container {
+.grid--item:focus .container {
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -201,31 +200,28 @@ h2:before, h2:after {
 
 <center><nav class='mainNav'>
   <ul>
-    <li><a href="#info">About the Festival</a></li>
-    <li><a href="#map">Where's The Gorge</a></li>
-    <li><a href="#contact">Get Tickets</a></li>
+    <li><a href="#info">Show Info</a></li>
+    <li><a href="#map">Show Map</a></li>
+    <li><a href="#contact">Buy Tickets</a></li>
   </ul>
 </nav>
 
 <section id="info" class="content-box hidden">
   <a href="#" class="btn-close">x</a>
-  <h2>About Sasquatch</h2>
-  <p><p>Sasquatch! Music Festival is an annual music festival held at the Gorge Amphitheatre in George, Washington. In recent years it has taken place on the Memorial Day weekend, running for three to four days. In 2014, Adam Zacks decided to expand the festival to two weekends due to the high demand for tickets in 2013.[1] Rather than expanding to two four day weekends, the festival instead only expanded to two three day weekends.</p>
-<p>Sasquatch! typically features a range of musical genres, with the emphasis being on indie rock bands and singer-songwriters, but also including alternative rock, hip hop, EDM, and comedy acts. As of 2012 the festival features five stages: Sasquatch! Main Stage, Bigfoot Stage, Banana Shack (a tent that features primarily comedy acts and electronic music- now known as El Chupacabra), Yeti Stage, and Uranus Stage (the smallest of stages, that generally changes names every year).</p>
-<p>Most attendees of the festival camp in designated campsite fields nearby, as the venue is relatively remote and there are no large urban areas nearby.Sasquatch! was voted as one of the &#8216;Top 10 Summer Music Festivals in the US&#8221; by ConcertBoom.</p>
+  <h2>Information</h2>
+  <p>If I'm not at the show next year then there is no show. His existence is a blessing. Us real music guys wanna have fun too His existence is a blessing.</p>
 </section>
 
 <section id="map" class="content-box hidden">
   <a href="#" class="btn-close">x</a>
   <h2>Map</h2>
-  <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.3003214406626!2d-119.99799974922696!3d47.1013822790522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54999d5ba481d30b%3A0xe0bd57b101fdca66!2sThe+Gorge+Amphitheatre!5e1!3m2!1sen!2sca!4v1458434624732" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+  <p><iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d432.82188902202824!2d-118.474438!3d34.10985!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1457384676342" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
 </section>
 
 <section id="contact" class="content-box hidden">
   <a href="#" class="btn-close">x</a>
-  <h2>Buy Tickets Now!</h2>
-	<p>
-<iframe src="http://www.livenation.com/artists/137753/sasquatch-festival-2015" width="100%" height="870" frameborder="5" scrolling="no"></iframe></p>
+  <h2>Contact</h2>
+  <p><a href="mailto:kanye@example.com">Mail Us!</a></p>
 	</section></center>
 
 
@@ -239,7 +235,7 @@ h2:before, h2:after {
 
 <div class="grid">
   <div class="grid--item">
-    <div class="img" style="background-image: url(http://aclp1.c3cdn.com/wp/wp-content/uploads/2015/05/acl-disclosure.jpeg);"></div>
+    <div class="img" style="background-image: url(http://www.electronicbeats.net/wp-content/uploads/2015/03/Disclosure_EB.jpg);"></div>
     <div class="container">
       <h2>Disclosure</h2>
       <div class="desc">Playing May 27</div>
@@ -253,7 +249,7 @@ h2:before, h2:after {
     </div>
   </div>
   <div class="grid--item">
-    <div class="img" style="background-image: url(http://cache.mrporter.com/journal-images/production/24c8d94e-eea5-4521-a914-bdbabf479841);"></div>
+    <div class="img" style="background-image: url(http://www.billboard.com/files/media/leon-bridges-bb20-2015-billboard-01-650.jpg);"></div>
     <div class="container">
       <h2>Leon Bridges</h2>
       <div class="desc">Playing May 29</div>
@@ -267,7 +263,7 @@ h2:before, h2:after {
     </div>
   </div>
   <div class="grid--item">
-    <div class="img" style="background-image: url(http://www.chartattack.com/wp-content/uploads/2012/09/timthumb.jpeg);"></div>
+    <div class="img" style="background-image: url(http://www.ishitmusic.com/wp-content/uploads/2012/12/m83.jpg);"></div>
     <div class="container">
       <h2>M83</h2>
       <div class="desc">Playing May 28</div>

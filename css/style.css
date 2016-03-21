@@ -14,16 +14,15 @@
 }
 
 .content-box {
-  background-color: #309a8f;
+  background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 100px;
-  right: 0px;
-  bottom: 0px;
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
   left: 30px;
   padding: 30px;
   color: white;
   overflow: scroll;
-  z-index: 1;
 }
 
 .content-box a {
@@ -166,11 +165,11 @@ h2:before, h2:after {
   color: turquoise;
 }
 
-.grid--item:active .img:before,
-.grid--item:active .img:after,
-.grid--item:active .container {
+.grid--item:focus .img:before,
+.grid--item:focus .img:after,
+.grid--item:focus .container {
   opacity: 2;
 }
-.grid--item:active .container {
+.grid--item:focus .container {
   transform: translate(-50%, -50%) scale(1);
 }

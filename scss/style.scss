@@ -1,0 +1,203 @@
+.mainNav li {
+  list-type: none;
+  display: inline-block;
+	margin-bottom: 50px;
+}
+
+.mainNav a {
+  background-color: #ccc;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  font-family: Montserrat, sans-serif;
+}
+
+.content-box {
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  padding: 30px;
+  color: white;
+  overflow: scroll;
+}
+
+.content-box a {
+  color: #eee;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  font-size: 24px
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+	background: #dedede;
+	-webkit-font-smoothing: antialiased;
+	min-width: 1200px;
+}
+
+.grid {
+	padding: 0px;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.grid--item {
+	position: relative;
+	margin-top: -90px;
+	margin-right: 5px;
+	margin-left: 5px;
+	width: calc(33.33% - 10px);
+	float: left;
+	//border-left: 4px solid #dedede;
+	//border-right: 4px solid #dedede;
+	transition: all .8s;
+	
+	overflow: hidden;
+	
+	-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	
+	-webkit-shape-outside:   polygon(
+    25% 0, 100% 0%, 75% 100%, 0% 100%
+  );
+	
+	&:before {
+		display: block;
+		padding-top: 112.5%;
+		content: '';
+	}
+	
+	&:nth-child(1),
+	&:nth-child(2) { margin-top: 0; }
+	
+	&:nth-child(7n - 1),
+	&:nth-child(1) {
+		margin-left: 185px;
+	}
+}
+
+.img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	background-position: center center;
+	background-size: cover;
+	
+	overflow: hidden;
+	
+	-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	
+	&:before,
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		opacity: 0;
+		transition: opacity .8s;
+	}
+	
+	&:before {
+		background: rgba(BLACK, 0.25);
+	}
+	
+	&:after {
+		background: linear-gradient(to top, transparent, rgba(black, 0.5), transparent);
+	}
+}
+
+.container { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	
+	opacity: 0;
+	text-align: center;
+	color: white;
+	will-change: transform;
+	backface-visibility: hidden;
+	transform: translate(-50%, -50%) scale(0.9);
+	transition: all .2s;
+	
+-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+h1,
+h2 {
+	font-family: 'Monstserrat';
+	font-style: regular;
+	font-weight: 700;
+}
+
+h1 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 36px;
+	color: 000000;
+	font-family: Roboto slab, serif;
+}
+
+h2 {
+	font-size: 18px;
+	
+	&:before,
+	&:after {
+		display: inline-block;
+		margin: 0 0.5em;
+		width: 0.75em;
+		height: 0.03em;
+		background: turquoise;
+		content: '';
+		vertical-align: middle;
+		transition: all 1s;
+	}
+}
+
+.desc {
+	margin: 1em 0 0;
+	font-family: 'Montserrat';
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 1.5;
+	color: turquoise;
+}
+
+
+.grid--item:focus {
+
+	.img:before,
+	.img:after,
+	.container { opacity: 2; }
+	
+	.container { transform: translate(-50%, -50%) scale(1); }
+}
+
