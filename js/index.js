@@ -1,52 +1,51 @@
-$('.mainNav a').click( 
-  function(){
-    $('.hidden').fadeOut(500);
-    $( $(this).attr('href') ).fadeIn(750);
-  }
-)
+$(document).ready(function() {
 
-$('.btn-close').click(
-  function(){
-    $(this).closest('.content-box').fadeOut(500);
-  }
-)
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
 
+  function pagination() {
+    scrolling = true;
 
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
 
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
 
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
 
-popup = {
-  init: function(){
-    $('figure').click(function(){
-      popup.open($(this));
-    });
-    
-    $(document).on('click', '.popup img', function(){
-      return false;
-    }).on('click', '.popup', function(){
-      popup.close();
-    })
-  },
-  open: function($figure) {
-    $('.gallery').addClass('pop');
-    $popup = $('<div class="popup" />').appendTo($('body'));
-    $fig = $figure.clone().appendTo($('.popup'));
-    $bg = $('<div class="bg" />').appendTo($('.popup'));
-    $close = $('<div class="close"><svg><use xlink:href="#close"></use></svg></div>').appendTo($fig);
-    $shadow = $('<div class="shadow" />').appendTo($fig);
-    src = $('img', $fig).attr('src');
-    $shadow.css({backgroundImage: 'url(' + src + ')'});
-    $bg.css({backgroundImage: 'url(' + src + ')'});
-    setTimeout(function(){
-      $('.popup').addClass('pop');
-    }, 10);
-  },
-  close: function(){
-    $('.gallery, .popup').removeClass('pop');
-    setTimeout(function(){
-      $('.popup').remove()
-    }, 100);
-  }
-}
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
 
-popup.init()
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
+
+});

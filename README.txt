@@ -1,5 +1,5 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/anon/pen/zqZPrP.
+A Pen created at CodePen.io. You can find this one at http://codepen.io/anon/pen/reJvEM.
 
  
 
-Forked from [Fabio Ottaviani](http://codepen.io/supah/)'s Pen [DailyUI #016 - Popup / Overlay](http://codepen.io/supah/pen/ZWGJeR/).
+Forked from [Nikolay Talanov](http://codepen.io/suez/)'s Pen [Skewed One Page Scroll](http://codepen.io/suez/pen/gadLre/).
